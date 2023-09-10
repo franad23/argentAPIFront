@@ -1,0 +1,35 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --RuddyBlue: #6CACE4;
+  --WhiteSmoke: #F5F5F5;
+  --SelectiveYellow:#F6B50E;
+  --EerieBlack: #1F1F1F;
+  --Font: 'Fira Code', monospace;
+  /* font-weight 300 and 500 */
+}
+.mainContainerNavbarHomePage{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 50px;
+}
+.btnsMainContaineNavbar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.linksnavbar {
+  font-family: var(--Font);
+  color: var(--EerieBlack);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+}
+.linksnavbar:hover {
+  transition: 0.3s;
+  border-bottom: 3px solid var(--SelectiveYellow);
+}

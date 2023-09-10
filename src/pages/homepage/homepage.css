@@ -11,6 +11,3 @@
   --Font: 'Fira Code', monospace;
   /* font-weight 300 and 500 */
 }
-#root {
-  background-color: var(--WhiteSmoke);
-}

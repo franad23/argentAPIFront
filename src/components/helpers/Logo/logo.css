@@ -11,6 +11,14 @@
   --Font: 'Fira Code', monospace;
   /* font-weight 300 and 500 */
 }
-#root {
-  background-color: var(--WhiteSmoke);
+.mainContainerLogo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.logoArgentapi{
+  width: 60px;
+}
+.titleLogo { 
+  font-family: var(--Font);
 }
