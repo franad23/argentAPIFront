@@ -7,7 +7,8 @@ import { useState } from "react";
 //Components
 import NavbarHomePage from "../../components/homepage/navbar/NavbarHomePage";
 import ButtonHelper from "../../components/helpers/ButtonHelper/ButtonHelper";
-import worlCupIcon from "../../assets/images/worldcupicon.png"
+import worlCupIcon from "../../assets/images/worldcupicon.png";
+import CreateApiKey from "../../components/helpers/CreateApiKey/CreateApiKey";
 
 function Homepage() {
   const [year, setYear] = useState(1978);
@@ -98,6 +99,11 @@ function Homepage() {
                   </div>
                 </div>
               </div>
+            </div>
+            <hr />
+            <div>
+              <h3>Peticion POST:</h3>
+              <CreateApiKey/>
             </div>
           </div>
         </div>
