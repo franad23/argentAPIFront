@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --RuddyBlue: #6CACE4;
+  --WhiteSmoke: #F5F5F5;
+  --SelectiveYellow:#F6B50E;
+  --EerieBlack: #1F1F1F;
+  --Font: 'Fira Code', monospace;
+  /* font-weight 300 and 500 */
+}
+.dropdownMenuNavBar {
+  font-family: var(--Font);
+}
+.ant-dropdown-menu-title-content {
+  font-family: var(--Font);
+}

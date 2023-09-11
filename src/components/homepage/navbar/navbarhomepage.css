@@ -15,9 +15,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0px 50px;
+  padding: 0px 80px;
+  background-color: var(--WhiteSmoke);
 }
-.btnsMainContaineNavbar {
+.linksMainContaineNavbar {
   display: flex;
   gap: 10px;
   align-items: center;
@@ -27,9 +28,20 @@
   color: var(--EerieBlack);
   text-decoration: none;
   font-weight: 500;
-  border-bottom: 3px solid transparent;
+  border: 3px solid transparent;
 }
 .linksnavbar:hover {
   transition: 0.3s;
   border-bottom: 3px solid var(--SelectiveYellow);
+}
+
+/* ----------Mediaqueries----------- */
+@media (max-width: 768px) {
+  .linksMainContaineNavbar {
+    display: none;
+  }
+  .mainContainerNavbarHomePage {
+    padding: 0px 20px;
+    font-size: 1rem;
+  }
 }

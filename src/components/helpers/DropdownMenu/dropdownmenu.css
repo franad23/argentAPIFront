@@ -11,23 +11,15 @@
   --Font: 'Fira Code', monospace;
   /* font-weight 300 and 500 */
 }
-.mainContainerLogo {
-  display: flex;
-  align-items: center;
-  gap: 5px;
+.dropdownMenuNavBar {
+  font-family: var(--Font);
 }
-.logoArgentapi{
-  width: 60px;
-}
-.titleLogo { 
+.ant-dropdown-menu-title-content {
   font-family: var(--Font);
 }
 /* ----------Mediaqueries----------- */
-@media (max-width: 425px) {
-  .titleLogo {
-    font-size: 1.5rem;
-  }
-  .logoArgentapi {
-    width: 50px;
+@media (min-width: 768px) {
+  .mainContainerDropdownMenu {
+    display: none;
   }
 }
