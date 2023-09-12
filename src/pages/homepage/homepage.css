@@ -85,6 +85,7 @@ h4 {
 .worldCupsContainer {
   display: flex;
   align-items: center;
+  gap: 5px;
 }
 .postReqContainer {
   display: flex;
@@ -98,4 +99,14 @@ h4 {
   align-items: center;
   gap: 10px;
   width: 90%;
+}
+.inputsPostGetReqContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.inputPostGet {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
