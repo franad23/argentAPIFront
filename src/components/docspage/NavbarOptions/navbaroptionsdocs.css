@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --RuddyBlue: #6CACE4;
+  --WhiteSmoke: #F5F5F5;
+  --SelectiveYellow:#F6B50E;
+  --EerieBlack: #1F1F1F;
+  --Font: 'Fira Code', monospace;
+  /* font-weight 300 and 500 */
+}
+.mainContainerNavbarOptionsDocs {
+  width: 100%;
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btnNavbarOption {
+  font-family: var(--Font);
+  border: 3px solid transparent;
+  background-color: transparent;
+  font-size: 1rem;
+}
+.btnNavbarOption:hover {
+  cursor: pointer;
+  transition: 0.3s;
+  border-bottom: 3px solid var(--RuddyBlue);
+}
+.btnNavbarOptionsContainer{
+  padding: 20px 0px;
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  /* border: 1px solid blue; */
+}
+.btnNavbarOptionActive {
+  border-bottom: 3px solid var(--RuddyBlue);
+}

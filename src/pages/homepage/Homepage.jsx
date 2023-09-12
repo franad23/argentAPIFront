@@ -3,8 +3,9 @@ import { Select } from "antd";
 import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { useState } from "react";
-import toast, { Toaster } from 'react-hot-toast';
-import apiIcon from '../../assets/images/apiIcon.png'
+import toast, { Toaster } from "react-hot-toast";
+import apiIcon from "../../assets/images/apiIcon.png";
+import { Link } from "react-router-dom";
 
 //Components
 import NavbarHomePage from "../../components/homepage/navbar/NavbarHomePage";
@@ -12,8 +13,9 @@ import ButtonHelper from "../../components/helpers/ButtonHelper/ButtonHelper";
 import worlCupIcon from "../../assets/images/worldcupicon.png";
 import CreateApiKey from "../../components/helpers/CreateApiKey/CreateApiKey";
 import InputHelper from "../../components/helpers/InputHelper/InputHelper";
+import Footer from "../../components/homepage/footer/Footer";
 
-//API 
+//API
 import { PostRequest, GetRequest } from "../../api/requestUser";
 
 function Homepage() {
@@ -40,7 +42,9 @@ function Homepage() {
     },
     body: JSON.stringify({
       "userobject": {
-        "PrimerPOST":${userTextFirstPOST ? userTextFirstPOST : "Ingresa tu texto"}
+        "PrimerPOST":${
+          userTextFirstPOST ? userTextFirstPOST : "Ingresa tu texto"
+        }
     }}),
   })
     .then(response => response.json())
@@ -57,17 +61,20 @@ function Homepage() {
 
   const handlebtnPOST = async () => {
     try {
-      const res = await PostRequest({
-        userobject: {
-          PrimerPOST: userTextFirstPOST,
+      const res = await PostRequest(
+        {
+          userobject: {
+            PrimerPOST: userTextFirstPOST,
+          },
         },
-      }, userApiKey);
-      toast.success(res.message)
+        userApiKey
+      );
+      toast.success(res.message);
     } catch (error) {
       console.log(error);
-      toast.error(error.response.data.message)
+      toast.error(error.response.data.message);
     }
-  }
+  };
 
   const handlebtnGET = async () => {
     try {
@@ -75,13 +82,14 @@ function Homepage() {
       setUserFirstGet(JSON.stringify(res, null, 2));
     } catch (error) {
       console.log(error);
-      toast.error(error.response.data.message)
+      toast.error(error.response.data.message);
     }
-  
-  }
+  };
   return (
     <div className="mainContainerHomepage">
-      <div><Toaster/></div>
+      <div>
+        <Toaster />
+      </div>
       <NavbarHomePage />
       <div className="firstInfoContainer">
         <div className="infoContainer">
@@ -161,8 +169,8 @@ function Homepage() {
             </div>
             <hr />
             <div className="worldCupsContainer">
-              <h3>Peticiones POST y GET </h3> 
-              <img src={apiIcon} alt="apiIcon" className="iconWorldCup"/>
+              <h3>Peticiones POST y GET </h3>
+              <img src={apiIcon} alt="apiIcon" className="iconWorldCup" />
             </div>
             <div className="postReqContainer">
               <div className="createApiKeyContainer">
@@ -184,7 +192,9 @@ function Homepage() {
                     <InputHelper
                       inputHelperType="text"
                       inputHelperPlaceholder="Ingresa un texto para hacer tu primer POST"
-                      toHandleInputHelperChange={(data) => setUserTextFirstPOST(data)}
+                      toHandleInputHelperChange={(data) =>
+                        setUserTextFirstPOST(data)
+                      }
                     />
                   </div>
                 </div>
@@ -224,7 +234,9 @@ function Homepage() {
                     style={dark}
                     className="codeContainerFetch"
                   >
-                    {userFirstGet ? userFirstGet : "Ingresa tu ApiKey y hace tu primer GET!"}
+                    {userFirstGet
+                      ? userFirstGet
+                      : "Ingresa tu ApiKey y hace tu primer GET!"}
                   </SyntaxHighlighter>
                   <div className="btnFetchContainer">
                     <ButtonHelper
@@ -234,10 +246,18 @@ function Homepage() {
                   </div>
                 </div>
               </div>
+              <div className="toDocsContainer">
+                <hr />
+                <h3>
+                  Ahora explora todas las posibilidades en{" "}
+                  <Link to="/docs">documentacion</Link>.
+                </h3>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

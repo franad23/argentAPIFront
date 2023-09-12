@@ -1,0 +1,31 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --RuddyBlue: #6CACE4;
+  --WhiteSmoke: #F5F5F5;
+  --SelectiveYellow:#F6B50E;
+  --EerieBlack: #1F1F1F;
+  --Font: 'Fira Code', monospace;
+  /* font-weight 300 and 500 */
+}
+.mainContainerFooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  background-color: var(--WhiteSmoke);
+  color: var(--EerieBlack);
+  gap: 7px;
+}
+.heartIcon {
+  width: 20px;
+}
+.titleFooter {
+  font-family: var(--Font);
+}
+h5 {
+  font-weight: 500;
+}
