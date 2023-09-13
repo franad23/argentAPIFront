@@ -10,7 +10,9 @@ ArgentAPI es una plataforma que simula una Fake API diseñada para simplificar t
 -React-Hot-Toast
 -AntDesign
 
-## URL Repositorio de Backend: **[ArgentAPI](https://github.com/franad23/argentAPIBack)**
+## URL Repositorio de Backend: **[ArgentAPIBackend](https://github.com/franad23/argentAPIBack)**
+
+## Proyecto sigue en crecimiento, Si queres aportar no dudes en hacerlo! 
 
 
 
