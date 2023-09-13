@@ -6,7 +6,7 @@ function Footer() {
     <div className='mainContainerFooter'>
       <h5 className='titleFooter'>Hecho con</h5>
       <img src={heartIcon} alt="hearticon" className='heartIcon'/>
-      <h5 className='titleFooter'>por <a href='https://github.com/franad23' target='_blank' rel='noreferrer'>franad23</a></h5>
+      <h5 className='titleFooter'>por <a href='https://github.com/franad23' target='_blank' rel='noreferrer'>Franco</a></h5>
     </div>
   )
 }
