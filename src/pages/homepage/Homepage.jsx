@@ -6,6 +6,7 @@ import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import apiIcon from "../../assets/images/apiIcon.png";
 import { Link } from "react-router-dom";
+import backendurl from "../../components/helpers/backendurl.js";
 
 //Components
 import NavbarHomePage from "../../components/homepage/navbar/NavbarHomePage";
@@ -29,12 +30,12 @@ function Homepage() {
   const [userFirstGet, setUserFirstGet] = useState(null);
 
   const textReqPracticeFetch = `
-  fetch('http://localhost:3000/api/wordcupdata/${year}')
+  fetch('${backendurl}/api/wordcupdata/${year}')
     .then(response => response.json()) 
     .then(data => console.log(data))`;
 
   const postText = `
-  fetch('http://localhost:3000/api/postrequest', {
+  fetch('${backendurl}/api/postrequest', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json', 
@@ -54,7 +55,7 @@ function Homepage() {
     })`;
 
   const handlebtnFetch = () => {
-    fetch(`http://localhost:3000/api/wordcupdata/${year}`)
+    fetch(`${backendurl}/api/wordcupdata/${year}`)
       .then((response) => response.json())
       .then((data) => setDataFetch(JSON.stringify(data, null, 2)));
   };

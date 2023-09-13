@@ -1,9 +1,8 @@
 import axios from "axios";
-
-const backendUrl = "http://localhost:3000";
+import backendurl from "../components/helpers/backendurl.js"; 
 
 export const PostRequest = async (userobject, apiKey) => {
-  const response = await axios.post(`${backendUrl}/api/postrequest`, userobject, {
+  const response = await axios.post(`${backendurl}/api/postrequest`, userobject, {
     headers: {
       "apiKey": apiKey,
     }
@@ -12,7 +11,7 @@ export const PostRequest = async (userobject, apiKey) => {
 }
 
 export const GetRequest = async (apiKey) => {
-  const response = await axios.get(`${backendUrl}/api/getrequest`, {
+  const response = await axios.get(`${backendurl}/api/getrequest`, {
     headers: {
       "apiKey": apiKey,
     }
