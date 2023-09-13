@@ -37,3 +37,8 @@
     display: flex;
   }
 }
+@media (max-width: 768px) {
+  .btnCreateApiKey{
+    padding: 5px 15px;
+  }
+}

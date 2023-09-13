@@ -15,7 +15,7 @@ function NavbarHomePage() {
       <div className='linksMainContaineNavbar'>
         <Link to="/" className='linksnavbar'>Inicio</Link>
         <Link to="/docs" className='linksnavbar'>Docs</Link>
-        <Link to="/" className='linksnavbar'>Github</Link>
+        <a href='https://github.com/franad23/argentAPIFront' className='linksnavbar'>Github</a>
       </div>
     </div>
   )

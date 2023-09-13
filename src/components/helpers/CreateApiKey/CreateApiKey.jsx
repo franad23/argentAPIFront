@@ -12,13 +12,13 @@ function CreateApiKey() {
     e.preventDefault()
     try {
       const res = await createApiKey(emailUser)
-      toast.success('Verifica tu correo para obtener tu ApiKey')
+      console.log(res);
+      toast.success(res.message)
     } catch (error) {
       console.log(error);
       toast.error(error.response.data.message);
     }
   }
-  console.log(emailUser);
   return (
     <form className='mainContainerCreateApiKey' onSubmit={handleCreateApiKey}>
       <div><Toaster/></div>

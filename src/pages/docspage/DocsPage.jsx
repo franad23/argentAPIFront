@@ -1,4 +1,5 @@
 import "./docspage.css";
+import { useState } from "react";
 
 //Components
 import NavbarHomePage from "../../components/homepage/navbar/NavbarHomePage";
@@ -8,10 +9,13 @@ import CreateApiKey from "../../components/helpers/CreateApiKey/CreateApiKey";
 import PostInfoDoc from "../../components/docspage/postInfoDoc/PostInfoDoc";
 
 function DocsPage() {
+  const [currentOption, SetCurrentOption] = useState("post");
   return (
     <div className="mainContainerDocsPage">
       <NavbarHomePage />
-        <NavbarOptionsDoc/>
+        <NavbarOptionsDoc
+          toHandleOptionDocs={(data) => SetCurrentOption(data)}
+        />
         <div className="optionsInfoDocsContainer">
           <div className="optionsInfoDocs">
             <div className="createApiKeyContainerDocs">
@@ -20,7 +24,9 @@ function DocsPage() {
             </div>
             <div className="infoRequestContainerMain">
               <div className="infoRequestContainer">
-                <PostInfoDoc/>
+                <PostInfoDoc
+                  handleCurrentOption={currentOption}
+                />
               </div>
             </div>
           </div>

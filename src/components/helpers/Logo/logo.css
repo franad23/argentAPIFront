@@ -17,17 +17,18 @@
   gap: 5px;
 }
 .logoArgentapi{
-  width: 60px;
+  width: 50px;
 }
 .titleLogo { 
   font-family: var(--Font);
+  font-size: 1.5rem;
 }
 /* ----------Mediaqueries----------- */
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   .titleLogo {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .logoArgentapi {
-    width: 50px;
+    width: 40px;
   }
 }

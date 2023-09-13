@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./navbaroptionsdocs.css";
 
 function NavbarOptionsDoc(props) {
-  const [currentOption, SetCurrentOption] = useState(null);
+  const [currentOption, SetCurrentOption] = useState("post");
 
   const handleOnClick = (e) => {
     SetCurrentOption(e.target.name);
@@ -12,13 +12,13 @@ function NavbarOptionsDoc(props) {
   return (
     <div className="mainContainerNavbarOptionsDocs">
       <div className="btnNavbarOptionsContainer">
-        <button
+        {/* <button
           name="data"
           className={currentOption === "data" ? "btnNavbarOption btnNavbarOptionActive" : "btnNavbarOption"}
           onClick={handleOnClick}
         >
           DATOS
-        </button>
+        </button> */}
         <button
           name="get"
           className={currentOption === "get" ? "btnNavbarOption btnNavbarOptionActive" : "btnNavbarOption"}

@@ -39,3 +39,9 @@
 .btnNavbarOptionActive {
   border-bottom: 3px solid var(--RuddyBlue);
 }
+/* ----------Mediaqueries----------- */
+@media (max-width: 768px) {
+  .btnNavbarOptionsContainer {
+    width: 90%;
+  }
+}
