@@ -4,11 +4,11 @@ ArgentAPI es una plataforma que simula una Fake API diseñada para simplificar t
 
 ## Tecnologias Utilizadas:
 
--Vite
--ReactJS
--Axios
--React-Hot-Toast
--AntDesign
+- Vite
+- ReactJS
+- Axios
+- React-Hot-Toast
+- AntDesign
 
 ## URL Repositorio de Backend: **[ArgentAPIBackend](https://github.com/franad23/argentAPIBack)**
 
