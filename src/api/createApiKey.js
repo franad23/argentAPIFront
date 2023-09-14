@@ -1,8 +1,8 @@
 import axios from "axios";
+import backendurl from "../components/helpers/backendurl.js"; 
 
-const backendUrl = "http://localhost:3000"
 
 export const createApiKey = async (useremail) => {
-  const response = await axios.post(`${backendUrl}/api/creatingapikey`, {useremail});
+  const response = await axios.post(`${backendurl}/api/creatingapikey`, {useremail});
   return response.data;
 }

@@ -11,6 +11,10 @@
   --Font: 'Fira Code', monospace;
   /* font-weight 300 and 500 */
 }
+.mainContainerHomepage {
+  position: relative;
+  padding-bottom: 50px;
+}
 .firstInfoContainer {
   display: flex;
   flex-direction: column;

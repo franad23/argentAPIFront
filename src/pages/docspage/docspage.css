@@ -11,6 +11,11 @@
   --Font: 'Fira Code', monospace;
   /* font-weight 300 and 500 */
 }
+.mainContainerDocsPage {
+  position: relative;
+  height: 100vh;
+  padding-bottom: 50px;
+}
 .optionsInfoDocsContainer {
   display: flex;
   flex-direction: column;
