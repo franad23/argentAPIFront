@@ -1,3 +1,3 @@
-const backendurl = 'https://argentapi.onrender.com';
+const backendurl = 'http://localhost:3000' || 'https://argentapi.onrender.com';
 
 export default backendurl;
